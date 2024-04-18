@@ -1,0 +1,798 @@
+    * {
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        /* Adjust the font weight as needed */
+        font-style: normal;
+        font-variation-settings:
+            "slnt" 0;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .transparent-header {
+        background-color: rgba(238, 239, 233, 0.707);
+        /* Adjust the alpha value for the desired transparency */
+    }
+
+    .transparent-body {
+        background-color: rgba(238, 233, 233, 0.5);
+        /* Adjust the alpha value for the desired transparency */
+    }
+
+
+
+
+
+    header {
+        background-color: white;
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        /* Ensure the header is above other content */
+    }
+
+    .nav-links {
+        display: flex;
+    }
+
+    .nav-links ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav-links li {
+        margin-right: 20px;
+    }
+
+    .hamburger-menu {
+        display: none;
+        /* Hide hamburger menu by default */
+    }
+
+    /* Media Query for small devices */
+    @media (max-width: 768px) {
+        .nav-links {
+            display: none;
+            /* Hide navigation links on small devices */
+        }
+
+        .hamburger-menu {
+            display: block;
+            /* Show hamburger menu */
+        }
+
+
+        /* Style hamburger menu icon */
+        .hamburger-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+
+        .line {
+            width: 100%;
+            height: 3px;
+            background-color: #000;
+            border-radius: 5px;
+        }
+    }
+
+    /* .main span {
+        font-weight: bolder;
+    } */
+
+    .main h1 {
+        font-weight: bolder;
+    }
+
+    .main .btn {
+        align-items: center;
+    }
+
+    .logo img {
+        height: 40px;
+        /* Adjust according to your logo size */
+    }
+
+
+
+
+    nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-left: 10px;
+        /* Adjust as per your preference */
+    }
+
+    nav ul li:first-child {
+        margin-left: 0;
+    }
+
+    nav ul li a {
+        color: gray;
+        text-decoration: none;
+        padding: 8px 15px;
+        border-radius: 5px;
+        font-size: 18px;
+
+    }
+
+    nav ul li a .fas {
+        margin-left: 5px;
+    }
+
+
+    nav ul li a:hover {
+        color: black;
+    }
+
+    nav ul li.signup a {
+        background-color: #333;
+        color: white;
+        /* Dark background color for the signup button */
+    }
+
+    nav ul li.signup a:hover {
+        background-color: gray;
+        /* Changes to light grey when hovered over*/
+    }
+
+    @media screen and (max-width: 768px) {
+        nav {
+            display: block;
+        }
+
+        .menu-btn button {
+            display: block;
+            /* Display the menu button when window shrinks */
+        }
+    }
+
+
+    /*Body section*/
+    .main {
+        padding-top: 100px;
+        cursor: pointer;
+        text-align: center;
+
+    }
+
+    .main h1 {
+        position: relative;
+        font-weight: bolder;
+        text-align: center;
+        font-size: 90px;
+
+    }
+
+    .text-gradient {
+        background-clip: text;
+        /* Apply gradient to the text */
+        color: transparent;
+        /* Make the text transparent */
+        background-image: linear-gradient(to right, #3498db, rgb(138, 227, 227));
+        /* Define the gradient */
+        animation: gradient-animation 4s linear infinite;
+        /* Apply animation */
+        font-weight: bolder;
+    }
+
+    @keyframes gradient-animation {
+        0% {
+            background-position: 0%;
+        }
+
+        100% {
+            background-position: 100%;
+            /* Move the gradient from left to right */
+        }
+    }
+
+
+    .main h5 {
+        padding-top: 10px;
+    }
+
+    @media only screen and (max-width: 600px) {
+        .main h1 {
+            font-size: 50px;
+        }
+
+        .main h5 {
+            display: none;
+        }
+    }
+
+    /*Button Section*/
+    .main .btn {
+        width: 15%;
+        height: 50px;
+        align-items: center;
+        margin-right: 2px;
+        font-size: 18px;
+    }
+
+    .main .btn-dark {
+        width: 15%;
+        height: 50px;
+        align-items: center;
+        margin: 20px;
+        margin-left: 2px;
+        font-size: 18px;
+    }
+
+    @media screen and (max-width: 1000px) {
+        .main .btn {
+            display: flex;
+            width: 50%;
+            height: 50px;
+            justify-content: center;
+            align-items: center;
+           margin: auto;
+            font-size: 15px;
+        }
+    }
+
+
+
+    /*video section*/
+    #video {
+        margin-top: 20px;
+        align-items: center;
+        position: relative;
+    }
+
+
+    .circle-center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #myImg {
+
+        cursor: pointer;
+        transition: 0.3s;
+
+        border-radius: 30px;
+        padding: 5px;
+        border: none;
+        font-size: 20px;
+        background-color: #f1f1f1;
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+    }
+
+    #myImg img:hover {
+        background-color: blue;
+    }
+
+
+
+
+    /* The Modal (background) */
+    .modal {
+        display: none;
+
+        position: fixed;
+
+        z-index: 1;
+
+        padding-top: 100px;
+
+        left: 0;
+        top: 0;
+        width: 100%;
+
+        height: 100%;
+
+        overflow: auto;
+        /* Enable scroll if needed */
+        background-color: rgb(0, 0, 0);
+
+        background-color: rgba(0, 0, 0, 0.9);
+
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+        margin: auto;
+        display: block;
+        width: 80%;
+        max-width: 700px;
+    }
+
+    h1,
+    h4 {
+        text-align: center;
+    }
+
+
+    /* Add Animation */
+    .modal-content,
+    #caption {
+        -webkit-animation-name: zoom;
+        -webkit-animation-duration: 0.6s;
+        animation-name: zoom;
+        animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+        from {
+            -webkit-transform: scale(0)
+        }
+
+        to {
+            -webkit-transform: scale(1)
+        }
+    }
+
+    @keyframes zoom {
+        from {
+            transform: scale(0)
+        }
+
+        to {
+            transform: scale(1)
+        }
+    }
+
+    /* The Close Button */
+    .close {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: #f1f1f1;
+        font-size: 40px;
+        font-weight: bold;
+        transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #bbb;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    /* Add this media query at the end of your CSS */
+
+@media only screen and (max-width: 600px) {
+    .modal {
+        padding-top: 0; /* Remove padding from the top */
+    }
+
+    #myImg {
+        top:80%; /* Remove the top position */
+        
+        transform: translateX(-50%);
+        width: 50%;
+        /* Set the width of the image */
+        height: 20%;
+        font-size: 9px;
+        
+    }
+    
+     
+    .circle-center{
+        display: none;
+    }
+}
+
+
+    .vl {
+        border-left: 3px solid gray;
+        height: 80px;
+        left: 50%;
+        margin-left: 50%;
+        top: 0;
+        opacity: .2;
+
+    }
+    /*container section*/
+
+    .icon {
+
+        margin-left: 95%;
+        margin-top: -50px;
+        width: 20px;
+        border-radius: 50%;
+
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+
+
+
+    }
+
+    
+    .container h3 {
+        margin-top: 90px;
+        font-weight: bolder;
+    }
+    .container h5,p{
+        text-align: left;
+    }
+   
+    /*Grid section*/
+   
+
+   
+    .explore h1 {
+        font-weight: bold;
+    }
+
+    .v2 {
+        border-left: 3px solid black;
+        height: 80px;
+        left: 50%;
+        margin-left: 50%;
+        top: 0;
+        opacity: .2;
+    }
+   
+    .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+        height: 90%;
+        margin: 0 auto;
+        padding: 10px;
+       
+      
+    }
+   
+    
+      .grid-container {
+
+       
+        background-color: black;
+         width:100%;
+         height:30%;
+         margin-top: 50px;
+        
+     }
+     
+        
+        
+    
+    .grid-container .box{
+        width: 80%;
+        height: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        position: relative;
+
+
+    }
+    .grid-container img{
+         width:50px ;
+         height:40px ;
+         margin-top:10px;
+         border-radius: 50%;
+    }
+    .grid-container .box .row:first-child {
+        margin-top: -50px; /* Adjust as needed */
+    }
+    
+ 
+
+/* Media query for smaller devices */
+/* Add this media query at the end of your CSS */
+
+@media only screen and (max-width: 600px) {
+    .grid-container .box .row {
+        position: static;
+    }
+
+    .grid-container .box .row > div {
+        width: 100%;
+        margin-top: 10px; /* Adjust as needed */
+    }
+}
+
+
+    /*trusted section*/
+
+    .trust {
+        margin-top: 110px;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .trust h1 {
+        font-weight: bolder;
+        font-size: 50px;
+
+    }
+
+    .trust p {
+        font-size: 20px;
+        text-align: center;
+    }
+   @media screen and (max-width: 600px) {
+    .trust h1 {
+            font-size: 25px;
+        }
+
+        .trust p {
+            font-size: 15px;
+            text-align: center;
+        }
+
+
+    }
+    
+
+    .logos ul {
+        list-style: none;
+        /* Remove default list styles */
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: space-between;
+        /* Display as flex container */
+    }
+
+    .logos ul li {
+        margin-right: 20px;
+        /* Adjust margin between items */
+    }
+
+    .logos ul li:last-child {
+        margin-right: 0;
+        /* Remove margin from last item */
+    }
+
+    .logos ul li img {
+        padding: 0 10px;
+        width: auto;
+    }
+
+    @media (max-width: 600px) {
+        .about {
+            padding: 0;
+        }
+
+        .logos,
+        .contact {
+            text-align: center;
+        }
+
+        
+    .logos ul {
+        display: flex;
+        flex-direction: column; /* Display list items vertically */
+        align-items: center; /* Center list items horizontally */
+    }
+
+    .logos ul li {
+        margin-bottom: 20px; /* Add margin between logos */
+    }
+}
+
+    
+
+
+   
+
+    /*@end subscribe container*/
+    .container-comment h6{
+        text-align: center;
+    }
+    .container-comment h6{
+        position: relative;
+    }
+    .container-comment img {
+        position: absolute;
+        top: -8%;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        align-items: center;
+
+
+    }
+    .container_subscribe {
+        width: 95%;
+        border-radius: 5px;
+        background-image: url("images/post.png");
+        color: #f1f1f1;
+        padding: auto;
+        margin: auto;
+
+    }
+
+    .container_subscribe .subtext {
+        width: 40%;
+        padding: 7px;
+        background-color: rgb(206, 202, 202);
+        border-radius: 5px;
+        border: none;
+    }
+
+    .container_subscribe .btn {
+        padding: 8px;
+        border: none;
+    }
+
+    @media (max-width: 768px) {
+        .container_subscribe {
+            width: 90%;
+            /* Adjust width for smaller screens */
+            padding: 15px;
+            /* Adjust padding for smaller screens */
+        }
+
+        .container_subscribe .subtext {
+            width: 100%;
+            /* Make the input full width on smaller screens */
+            margin-bottom: 10px;
+            /* Add margin below the input */
+        }
+
+        .container_subscribe .btn {
+            width: 100%;
+            /* Make the button full width on smaller screens */
+        }
+        .container-comment img {
+            position: relative; /* Change position to relative */
+            top: auto; /* Remove top positioning */
+            left: 50%; /* Keep the image centered horizontally */
+            transform: translateX(-50%);
+            
+        }
+    }
+
+
+    .footer-logo {
+
+        color: gray;
+        /* Adjust text color */
+        padding: 20px 0;
+        /* Adjust padding */
+        display: flex;
+        justify-content: space-around;
+        /* Adjust as needed */
+        align-items: center;
+        flex-wrap: wrap;
+        /* Allows items to wrap to a new line if needed */
+    }
+
+    .footer-logo ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .footer-logo ul b {
+        color: black;
+    }
+
+    .footer-logo ul li {
+        margin-right: 20px;
+        /* Adjust spacing between items */
+    }
+
+    .footer-logo input[type="text"],
+    .footer-logo button[type="submit"] {
+        margin-top: 10px;
+        /* Adjust vertical spacing */
+    }
+
+
+    .logo-li ul {
+        list-style-type: none;
+
+    }
+
+    .logo-li ul li {
+        display: inline;
+    }
+
+    @media (max-width: 768px) {
+        .footer-logo {
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 10px 0;
+            /* Adjust padding for smaller screens */
+        }
+
+        .footer-logo ul li {
+            margin-right: 0;
+            /* Remove right margin for smaller screens */
+            margin-bottom: 10px;
+            /* Add bottom margin for spacing */
+            margin-left: 5px;
+        }
+
+        .footer-logo input[type="text"],
+        .footer-logo button[type="submit"] {
+            margin-top: 5px;
+            /* Adjust vertical spacing */
+        }
+    }
+
+    /*copyright*/
+
+    .copy-content {
+        display: flex;
+        justify-content: space-between;
+
+        align-items: center;
+
+        padding: 5px 5px;
+
+        background-color: #f8f9fa;
+
+    }
+
+    .copy-link {
+        display: flex;
+        align-items: center;
+        /* Vertically centers items */
+    }
+
+    .copy-content {
+        margin-right: 20px;
+        /* Add space between copy and social links */
+    }
+
+    .logo img {
+        width: 20px;
+        /* Adjust the width of the logo as needed */
+        height: auto;
+        /* Maintain aspect ratio */
+        border-radius: 50%;
+        box-shadow: 2px 2px 2px 2px #888888;
+        margin: 3px;
+    }
+
+    @media (max-width: 600px) {
+        .logo {
+
+            flex-direction: column;
+            /* Stack images vertically */
+            align-items: flex-start;
+            /* Align images to the start (left) */
+        }
+
+        .logo img {
+            width: 20px;
+            /* Adjust width for smaller screens */
+            margin: 3px 0;
+            /* Adjust vertical margin */
+        }
+        .copy-content{
+            font-size: 10px;
+        }
+    }
